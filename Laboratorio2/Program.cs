@@ -87,3 +87,24 @@ Console.WriteLine("}\n");
 //-------------------------------------------------------------------------------
 
 Console.WriteLine("2. ");
+
+Console.WriteLine("Somando colunas com matriz multidimensional");
+
+int[,] matriz = new int[5, 5] { 
+    { 3, 5, 8, 13, 5 },
+    { 4, 2, 8, 1, 11 },
+    { 16, 1, 5, 3, 7 },
+    { 3, 5, 4, 9, 17 },
+    { 1, 6, 4, 5, 11 }
+};
+
+int somaColuna;
+//colunas
+for (int i = 0; i < matriz.GetLength(1); i++) {
+    somaColuna = 0;
+    //linhas
+    for (int j = 0; j < matriz.GetLength(0); j++) {
+        somaColuna += matriz[j, i];
+    }
+    Console.WriteLine("Soma da coluna " + i + " = " + somaColuna);
+}

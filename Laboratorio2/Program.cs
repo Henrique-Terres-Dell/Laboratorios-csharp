@@ -86,9 +86,7 @@ Console.WriteLine("}\n");
 
 //-------------------------------------------------------------------------------
 
-Console.WriteLine("2. ");
-
-Console.WriteLine("Somando colunas com matriz multidimensional");
+Console.WriteLine("2. Somando colunas com matriz multidimensional");
 
 int[,] matriz = new int[5, 5] { 
     { 3, 5, 8, 13, 5 },

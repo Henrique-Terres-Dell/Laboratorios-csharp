@@ -52,6 +52,55 @@ foreach (KeyValuePair<int, string> item in paises) {
     Console.WriteLine("Código {0} = {1}", codigo, pais);
 }
 
+Console.WriteLine();
+
 //-------------------------------------------------------------------------------
 
 Console.WriteLine("4 - Exercícios:\n");
+
+Console.WriteLine("1. Buscando um DDI a partir do nome de um país no dicionário");
+
+string paisBusca = "Reino Unido";
+foreach (KeyValuePair<int, string> item in paises) {
+    int codigo = item.Key;
+    string pais = item.Value;
+    if(paisBusca.Equals(pais)) Console.WriteLine("País: {0} | Código = {1}", pais, codigo);
+}
+
+Console.WriteLine();
+
+//-------------------------------------------------------------------------------
+
+//Lista usada nos exercícios 2 e 3
+List<int> lista = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+Console.Write("2. Método que retorna a quantidade de elementos acima da média na lista { ");
+Console.WriteLine(string.Join(", ", lista) + " }");
+
+Console.WriteLine("Quantidade de elementos acima da média = " + TotalAcimaMedia(lista));
+
+int TotalAcimaMedia(List<int> lista) {
+    double media = lista.Average();
+    
+    int qtdAcimaMedia = 0;
+    foreach (int nr in lista) if (nr > media) qtdAcimaMedia++;
+    return qtdAcimaMedia;
+}
+
+Console.WriteLine();
+
+//-------------------------------------------------------------------------------
+
+Console.Write("3. Método que retorna todos os elementos acima da média na lista { ");
+Console.WriteLine(string.Join(", ", lista) + " }");
+
+Console.Write("Elementos acima da média = ");
+Console.WriteLine(string.Join(", ", ListaAcimaMedia(lista)));
+
+List<int> ListaAcimaMedia(List<int> lista) {
+    double media = lista.Average();
+    
+    List<int> nrsAcimaMedia = new List<int> {};
+    foreach (int nr in lista) if (nr > media) nrsAcimaMedia.Add(nr);
+    return nrsAcimaMedia;
+}

@@ -29,8 +29,7 @@ public class Circulo {
         set { raio = value; }
     }
 
-    public override string ToString()
-    {
+    public override string ToString() {
         return "(" + string.Format("{0:F2}", CentroX + "; "
                 + string.Format("{0:F2}", CentroY) + ")"
                 + " raio = " + string.Format("{0:F2}", raio));

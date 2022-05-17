@@ -10,3 +10,8 @@ Console.WriteLine("Ar condicionado: ");
 ArCondicionado ar = new ArCondicionado();
 ar.Ligar();
 Console.WriteLine(ar.Estado);
+Console.WriteLine("Temperatura = " + ar.Temperatura + " graus celsius");
+ar.Aumentar(1.0);
+ar.Aumentar(4.0);
+ar.Diminuir(2.0);
+Console.WriteLine("Temperatura = " + ar.Temperatura + " graus celsius");
